@@ -46,7 +46,7 @@ class Assignment
       # use the User Model class to find all Users with the supplied username. 
       # NOTE:  Username is not unique in the Users table, thus you can have many users with the same username.
       # return a collection of User instances that match the provided username  
-    User.find_by_username(username)
+    User.where(username: username)
   end 
 
   def find_todolist_byname(name)
@@ -54,6 +54,7 @@ class Assignment
       # use the TodoList Model class to find all TodoLists with the supplied list_name. 
       # NOTE: List name is not required to be unique, thus you can have many lists with the same list name.
       # return a collection of TodoList instances that match the provided name
+    TodoList.where(list_name: name)
   end     
 
   #
